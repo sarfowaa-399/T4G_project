@@ -109,7 +109,7 @@ body {
 
 /* About Section */
 .about-background {
-    background: url('../ama/images/img3.webp') no-repeat center center/cover;
+    background: url('./images/img3.webp') no-repeat center center/cover;
     padding: 170px 20px;
     color: #fa089d;
     text-align: center;
