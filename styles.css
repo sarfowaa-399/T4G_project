@@ -111,13 +111,23 @@ body {
 .about-background {
     background: url('./images/img3.webp') no-repeat center center/cover;
     padding: 170px 20px;
-    color: #fa089d;
     text-align: center;
     border-radius: 35px;
+    box-shadow: inset 5px 5px 5px 5px #888;
+    z-index: 1;
 }
+
+/* .about-section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+} */
 .about-background p{
     line-height: 3.5;
-    font-size: 1.3rem;
+    font-size: 25px;
+    color: #191927;
 }
 /* About Page */
 .about-page{
@@ -195,6 +205,11 @@ body {
     padding: 10px 15px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+
+.card button:hover {
+    background-color: #26e20d;
 }
 
 /* Services Section */
@@ -410,6 +425,27 @@ body {
     color: #fff;
 }
 
+.contact-map{
+    margin: 20px;
+
+}
+
+.contact-details{
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: #888 5px 5px ;
+    border-radius: 20px;
+}
+
+.contact-details h2{
+      color: #242e31;
+}
+
+.contact-details p{
+    color: #66696d;
+}
+
 .contact-container h1 {
     font-size: 28px;
     text-align: center;
@@ -456,7 +492,32 @@ body {
     background-color: #0ca00c;
 }
 
+.faq-section{
+    background: #afcdec;
+    padding: 30px;
+    box-shadow: #888 10px 10px 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    margin: 5%;
+    margin-left: 25%;
 
+}
+.faq-section h2{
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.fag{
+    margin-bottom: 20px;
+}
+
+.faq h3{
+    color: #6b2e84;
+}
+.faq p{
+    color: #555;
+}
 
 /* Footer */
 footer {
