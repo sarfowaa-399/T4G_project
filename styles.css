@@ -170,6 +170,54 @@ body {
 .about-text ol li{
     margin-bottom: 10px;
 }
+
+    /* team section */
+.team-section {
+    padding: 40px;
+    text-align: center;
+}
+
+.team-section h2 {
+    color: #6b2e84;
+    margin-bottom: 30px;
+}
+
+.team-container {
+    display: flex;
+    background: #f9f9fa;
+}
+
+.team-member {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+    box-shadow: #dfdede 15px 10px 10px;
+    justify-content: space-evenly;
+}
+.member{
+           box-shadow: #c2c2c2 5px 5px 5px; 
+           margin: 20px;
+}
+
+.team-member img {
+    width: 400px;
+    height: 550px;
+    border-radius: 10px;
+    object-fit: unset;
+    margin-bottom: 10px;
+}
+
+.team-member h3 {
+    color: #6b2e84;
+    margin-bottom: 5px;
+}
+
+.team-member p {
+    color: #555;
+    font-size: 14px;
+}
+
+
 .contact-button{
     background: #00aaff;
     color: #fff;
@@ -179,6 +227,8 @@ body {
     display: inline-block;
     margin-top: 10px;
     box-shadow: inset 10px 10px #d4d3d3;
+    margin-left: 75px;
+    margin-bottom: 20px;
 
 }
 .card-container {
@@ -242,7 +292,7 @@ body {
 /* Services Page */
 .services-page {
     padding: 50px 20px;
-    background: #555;
+    background: #cac7c7;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -265,6 +315,10 @@ body {
     padding: 20px;
     width: 300px;
     text-align: left;
+}
+
+.services-container :hover{
+    background-color: #5c9292;
 }
 
 .service-card img {
@@ -311,7 +365,101 @@ body {
     max-width: 700px;
     border: 3px solid #52a8ee;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: #bebbbb 3px 3px 3px ;
+}
+
+  /* testimonials */
+.testimonials {
+    background: #7b65cc;
+    padding: 20px;
+    margin: 30px 0;
+    border-radius: 10px;
+    box-shadow: #a7a5a5 10px 10px 10px;
+    width: 30%;
+}
+
+.testimonial-card {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.testimonial-card p {
+    font-size: 16px;
+    color: #f5f0f0;
+    margin-bottom: 10px;
+}
+
+.testimonial-card h4 {
+    color: #190f1d;
+    font-size: 14px;
+}
+
+    /* FAQ sections */
+.faq-sections {
+    margin: 40px 0;
+    padding: 20px;
+    background: #7b65cc;
+    border-radius: 10px;
+    box-shadow: #a7a5a5 10px 10px 10px;;
+    width: 30%;
+}
+
+.faq-sections h2 {
+    color: #110d13;
+    margin-bottom: 20px;
+}
+
+.faqs {
+    margin-bottom: 15px;
+}
+
+.faqs h3 {
+    color: #331a3d;
+}
+
+.faqs p {
+    color: #f1ecec;
+}
+
+
+
+.cta {
+    text-align: center;
+    margin: 50px 0;
+    background: #7b62cc;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: #a7a5a5 10px 10px 10px;
+}
+
+.cta h2{
+    color: #1d0e19;
+}
+
+.cta-button {
+    margin-top: 10px;
+    display: inline-block;
+    background: rgb(196, 193, 193);
+    color: #6b2e84;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    box-shadow: #b4adad 3px 3px;
+}
+
+.cta-button:hover {
+    background: #eb14b9;
+    color: white;
+}
+
+.big-containers{
+    display: flex;
+    gap: 5px;
+    justify-content: space-evenly;
 }
 
 .blog-link {
@@ -433,9 +581,12 @@ body {
 .contact-details{
     flex: 1;
     padding: 20px;
-    background-color: #fff;
+    background-color: #99b8d4;
     box-shadow: #888 5px 5px ;
     border-radius: 20px;
+    width: 30%;
+    margin: 20px auto;
+    
 }
 
 .contact-details h2{
@@ -493,7 +644,7 @@ body {
 }
 
 .faq-section{
-    background: #afcdec;
+    background: #bdd6f0;
     padding: 30px;
     box-shadow: #888 10px 10px 10px;
     border-radius: 10px;
