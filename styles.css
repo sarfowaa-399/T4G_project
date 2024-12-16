@@ -453,10 +453,14 @@ body {
     margin-bottom: 15px;
 }
 
+.faqs:last-child{
+    border-bottom: none;
+}
+
 .faqs h3 {
     color: #331a3d;
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.3s ease-in-out;
 }
 
 .faqs h3:hover{
@@ -464,15 +468,15 @@ body {
 }
 
 .faq-answer{
-    /* display: none; */
+    display: none;
     margin-top: 10px;
     color: #555;
     transition: all 0.3 ease-in-out;
 }
-/* 
+
 .faq-answer.show{
     display: block;
-} */
+}
 
 .faqs p {
     color: #f1ecec;
