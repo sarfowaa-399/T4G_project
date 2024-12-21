@@ -111,6 +111,25 @@ body {
 }
 
 
+/* Hero Text Slider */
+.hero-text-slider {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 10px 20px;
+    border-radius: 5px;
+    max-width: 80%;
+    text-align: center;
+    opacity: 1; /* Always visible */
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3;
+    font-style: italic;
+}
+
 
 /* About Section */
 .about-background {
@@ -203,15 +222,33 @@ body {
 
 .team-member {
     flex: 1;
-    margin: 0 15px;
+    margin: 40px;
     text-align: center;
-    box-shadow: #dfdede 15px 10px 10px;
+    box-shadow: #dfdede 20px 15px 15px;
     justify-content: space-evenly;
 }
-.member{
-           box-shadow: #c2c2c2 5px 5px 5px; 
-           margin: 20px;
+
+.member {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;    /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    box-shadow: #c2c2c2 20px 15px 15px;
+    margin: 20px;
+    transition: all 0.2s ease-in-out; /* Smooth transition */
+    text-align: center; /* Center-align text content */
 }
+
+.member img {
+    margin-bottom: 10px; /* Add spacing below the image */
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Smooth animation for appearance */
+}
+
+.member h3, .member p {
+    margin: 0; /* Remove additional margins */
+    padding: 0;
+}
+
 
 .team-member img {
     width: 400px;
@@ -232,10 +269,21 @@ body {
 }
 
 .member:hover, .team-member:hover h3{
-    margin-top: 10px;
+    margin-top: 35px;
     font-size: 1.2rem;
-    color: #3ca16e;
+    color: #fa0303;
 }
+
+.team-member img, .member img {
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.team-member img.hidden, .member img.hidden {
+    opacity: 0;
+    transform: scale(0.8);
+    display: none;
+}
+
 
 
 .contact-button{
@@ -340,7 +388,7 @@ body {
 }
 
 .service-card:hover{
-    transform: translateY(-35px);
+    transform: translateY(-50px);
 }
 
 .service-card:hover{
@@ -348,10 +396,6 @@ body {
 
 }
 
-/* 
-.services-container :hover{
-    background-color: #5c9292;
-} */
 
 .service-card img {
     width: 100%;
@@ -464,7 +508,7 @@ body {
 }
 
 .faqs h3:hover{
-       color: #097af1;
+       color: #53fc05;
 }
 
 .faq-answer{
@@ -752,13 +796,14 @@ footer {
     color: #fff;
     padding: 20px;
     text-align: center;
-    /* margin-top: 50px; */
 }
+
 footer .footer-links{
     display: flex;
     justify-content: center;
     list-style: none;
     gap: 15px;
+    margin-bottom: 15px;
 }
 footer .footer-links a{
     text-decoration: none;
@@ -769,6 +814,42 @@ footer .footer-links a:hover{
 }
 footer .footer-links .active{
     background-color: red;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+    /* subscribe and icons */
+    footer .subscribe-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 20px;
+    }
+
+footer .social-links{
+        display: flex;
+        list-style: none;
+        gap: 10px;
+        margin: 0;
+        padding: 0;
+} 
+
+footer .social-links a{
+    color: inherit;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover{
+    color: #00aaff;
+}
+
+footer .subscribe{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-grow: 1;  
 }
 
 footer .subscribe input {
@@ -789,6 +870,9 @@ footer .subscribe button {
 footer .subscribe button:hover {
     background: #7cca9f; /* Slightly darker blue for hover effect */
 }
+
+
+  /* login page */
 .login-page {
     background-color: rgb(211, 209, 209);
     display: flex;

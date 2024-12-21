@@ -93,6 +93,52 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     
+             // js for hero section
+    document.addEventListener("DOMContentLoaded", () => {
+        const heroSliderTexts = [
+            "At Answers Business Services, we specialize in streamlining business registration processes for entrepreneurs and companies across Ghana.",
+            "Our dedicated team assists with a wide array of registration-related services, such as renewing sole proprietorships, amending company information, filing annual returns, reprinting lost documents, and offering consultancy to help startups grow.",
+            "With a commitment to customer satisfaction and efficiency, we make it easy for clients to establish and expand their businesses, freeing them from complex administrative processes.",
+            "Our remote registration services ensure convenient, reliable, and hassle-free support for clients wherever they are."
+        ];
+    
+        const sliderElement = document.querySelector(".hero-text-slider");
+    
+        if (sliderElement) {
+            let currentIndex = 0;
+            let wordIndex = 0;
+            let currentWords = [];
+            let interval;
+    
+            // Function to display text word by word
+            function displayWordByWord() {
+                if (wordIndex < currentWords.length) {
+                    sliderElement.textContent += currentWords[wordIndex] + " ";
+                    wordIndex++;
+                } else {
+                    clearInterval(interval); // Clear interval after completing the sentence
+                    setTimeout(nextText, 2000); // Pause before moving to the next sentence
+                }
+            }
+    
+            // Function to update to the next text
+            function nextText() {
+                sliderElement.textContent = ""; // Clear current text
+                currentIndex = (currentIndex + 1) % heroSliderTexts.length; // Move to next text
+                currentWords = heroSliderTexts[currentIndex].split(" "); // Split into words
+                wordIndex = 0;
+                interval = setInterval(displayWordByWord, 300); // Start showing words
+            }
+    
+            // Initialize the first sentence
+            currentWords = heroSliderTexts[currentIndex].split(" ");
+            interval = setInterval(displayWordByWord, 300); // Show words every 300ms
+        }
+    });
+    
+    
+
+    
 
    //js for footer valid email subscription
 document.addEventListener("DOMContentLoaded", () => {

@@ -21,6 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
     
+  document.addEventListener("DOMContentLoaded", () => {
+    // Select all team member cards
+    const teamMembers = document.querySelectorAll(".team-member, .member");
+
+    teamMembers.forEach(member => {
+        const image = member.querySelector("img");
+
+        // Hide images by default
+        image.style.display = "none";
+
+        // Add click event to toggle visibility
+        member.addEventListener("click", () => {
+            if (image.style.display === "none") {
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        });
+    });
+});
+
      //js for footer valid email subscription
 document.addEventListener("DOMContentLoaded", () => {
   const subscribeButton = document.querySelector(".subscribe button");
